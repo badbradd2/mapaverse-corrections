@@ -1,0 +1,41 @@
+name: Wrong date
+description: An event, film or period is in the wrong year or era.
+title: "Wrong date: "
+labels: ["correction", "date"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page
+      description: The mapaverse.com address where the mistake appears.
+      placeholder: https://mapaverse.com/marvel/character/thor
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: What the page says now, for example "Shows the Battle of New York in 2011".
+    validations:
+      required: true
+  - type: input
+    id: correct
+    attributes:
+      label: The right date
+      description: The year (films and series) or the era and issue year (comics).
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: The source
+      description: A fan-wiki page, a comic issue (title, volume, number) or a film or episode with a rough timestamp. Corrections without a source cannot be checked.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources the page cites now
+      description: Filled in automatically when you come from the site. Leave as is.
+    validations:
+      required: false

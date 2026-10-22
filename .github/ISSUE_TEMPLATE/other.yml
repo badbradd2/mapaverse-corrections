@@ -1,0 +1,40 @@
+name: Other correction
+description: Anything else, including relationships, statuses and summaries.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page
+      description: The mapaverse.com address where the mistake appears.
+      placeholder: https://mapaverse.com/marvel/character/thor
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: What the page says now.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: The source
+      description: A fan-wiki page, a comic issue (title, volume, number) or a film or episode with a rough timestamp. Corrections without a source cannot be checked.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources the page cites now
+      description: Filled in automatically when you come from the site. Leave as is.
+    validations:
+      required: false
